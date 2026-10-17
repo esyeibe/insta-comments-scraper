@@ -12,13 +12,25 @@ Tool Python asinkron untuk mengambil (scrape) **komentar utama dan seluruh balas
 
 ---
 
-## ✨ Fitur Unggulan
+## ✨ Fitur Utama
 
-- 🧵 **Ambil Semua Balasan**: Mengambil komentar induk sekaligus seluruh balasan di dalamnya.
-- 📁 **3 Format Sekaligus**: Otomatis mengekspor data ke file **CSV** (UTF-8 BOM siap Excel), **JSON**, dan **TXT**.
-- 🔐 **Autentikasi Aman**: Mendukung cookie `sessionid` dari browser untuk menghindari verifikasi checkpoint atau blokir 2FA.
-- 💾 **Sesi Tersimpan**: Cukup login sekali, sesi disimpan di `cookie.json` dan `.env` agar tidak perlu repot login ulang.
-- ⚡ **Cepat & Anti-Ban**: Menggunakan engine asinkron (`httpx`) dengan batas request per detik (RPS) agar aman dari batas limit Instagram.
+- 💬 **Komentar & Balasan**: Mengambil komentar utama beserta seluruh balasan bersarang (*nested replies*).
+- 📊 **Ekspor 3 Format**: Otomatis menyimpan ke file **CSV** (siap buka di Excel tanpa format berantakan), **JSON**, dan **TXT**.
+- 🛡️ **Aman & Anti-Ban**: Menggunakan cookie browser (`sessionid`) dan pembatas kecepatan (rate limit) agar terhindar dari checkpoint/blokir.
+- 💾 **Sesi Otomatis**: Cukup konfigurasi cookie sekali, sesi otomatis tersimpan untuk pemakaian seterusnya.
+
+---
+
+## 🔄 Alur Kerja Singkat
+
+```text
+[1. Input Link] ──► [2. Cek Sesi Cookie] ──► [3. Unduh Komentar & Balasan] ──► [4. Simpan CSV, JSON, TXT]
+```
+
+1. **Input Link**: Masukkan URL postingan atau Reel Instagram.
+2. **Validasi Sesi**: Script otomatis menggunakan sesi cookie yang sudah tersimpan.
+3. **Proses Unduh**: Komentar dan balasan diambil secara bertahap dan aman.
+4. **Selesai**: Data langsung tersimpan rapi di dalam folder `download_comments/`.
 
 ---
 
