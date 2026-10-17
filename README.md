@@ -1,4 +1,4 @@
-# 🚀 InstaScrape — Instagram Comment & Reply Scraper
+# 🚀 insta-comments-scraper — Instagram Comment & Reply Scraper
 
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
