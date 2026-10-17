@@ -1,0 +1,8 @@
+__pycache__/
+cookie.json
+.env
+config.json
+download_comments/
+*.tmp
+venv/
+.DS_Store
